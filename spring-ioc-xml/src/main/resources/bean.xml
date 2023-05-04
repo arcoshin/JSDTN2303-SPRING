@@ -2,5 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="user" class="com.tedu.spring.iocxml.User"></bean>
+
+    <bean id="user" class="com.tedu.spring.iocxml.User"></bean>
+    <bean id="user2" class="com.tedu.spring.iocxml.User"></bean>
+    <bean id="student1" class="com.tedu.spring.iocxml.bean.Student_1"></bean>
+    <bean id="student2" class="com.tedu.spring.iocxml.bean.Student_2"></bean>
+
 </beans>
