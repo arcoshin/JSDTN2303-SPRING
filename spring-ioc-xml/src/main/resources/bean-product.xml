@@ -8,7 +8,9 @@
         <property name="title" value="TOYOTA_Yaris"/>
         <property name="num" value="999"/>
         <property name="sales" value="1"/>
-        <property name="comment" value="null"/>
+        <property name="comment">
+            <null/>
+        </property>
     </bean>
 
     <!--使用構造方法注入依賴-->
@@ -16,6 +18,8 @@
         <constructor-arg name="title" value="TOYOTA_Auris"/>
         <constructor-arg name="num" value="99"/>
         <constructor-arg name="sales" value="901"/>
-        <constructor-arg name="comment" value="null"/>
+        <constructor-arg name="comment">
+            <null/>
+        </constructor-arg>
     </bean>
 </beans>
