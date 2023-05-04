@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--使用set方法注入依賴-->
+    <bean id="productSet" class="com.tedu.spring.exercise.Product">
+        <property name="title" value="TOYOTA_Yaris"/>
+        <property name="num" value="999"/>
+        <property name="sales" value="1"/>
+        <property name="comment" value="null"/>
+    </bean>
+
+    <!--使用構造方法注入依賴-->
+    <bean id="productCons" class="com.tedu.spring.exercise.Product">
+        <constructor-arg name="title" value="TOYOTA_Auris"/>
+        <constructor-arg name="num" value="99"/>
+        <constructor-arg name="sales" value="901"/>
+        <constructor-arg name="comment" value="null"/>
+    </bean>
+</beans>

@@ -12,10 +12,21 @@ public class BookTest {
     @Test
     public void setTest() {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean-di.xml");
-        Book book = (Book) context.getBean("book");
+        Book book = context.getBean("book",Book.class);
+        System.out.println("b1 = " + book);//XML中注入依賴設置的值
+
         book.setBookName("thinking in java");
         book.setBookAuthor("Bruce Eckel");
-        System.out.println(book);
+        System.out.println("b2 = " + book);
     }
+
+    @Test
+    public void consTest() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean-di.xml");
+        Book book = context.getBean("bookCons",Book.class);
+        System.out.println("b3 = " + book);//XML中注入依賴設置的值
+    }
+
+
 
 }

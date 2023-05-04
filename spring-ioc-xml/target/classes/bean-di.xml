@@ -3,6 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="book" class="com.tedu.spring.dibase.Book"></bean>
+    <bean id="book" class="com.tedu.spring.dibase.Book">
+        <!--通過set方法實現注入效果-->
+        <property name="bookName" value="湯姆歷險記"/><!--標籤中若無內容可以直接以"/"結束-->
+        <property name="bookAuthor" value="馬克吐溫"></property>
+<!--    <property name="bookPage" value="馬克吐溫"></property> //由於booKPage屬性不具備set方法，故無法用此方式注入屬性-->
+    </bean>
+
+    <bean id="bookCons" class="com.tedu.spring.dibase.Book">
+        <!--通過構造方法實現注入效果-->
+        <constructor-arg name="bookName" value="三國演義"/>
+        <constructor-arg name="bookAuthor" value="羅貫中"/>
+        <constructor-arg name="bookPage" value="98765"/>
+    </bean>
 
 </beans>
