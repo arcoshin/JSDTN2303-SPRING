@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    外部bean注入:外部聲明一個bean傳入
+    -->
+    <bean id="emp1" class="com.tedu.spring.diobj.Emp">
+        <!--常規屬性注入-->
+        <property name="empName" value="張三" />
+        <property name="salary" value="50000.0" />
+
+        <!--對象類型注入-->
+        <property name="dept" ref="dept1"></property>
+    </bean>
+
+    <!--創建部門對象-->
+    <bean id="dept1" class="com.tedu.spring.diobj.Dept">
+        <property name="dept_Name" value="達內教研部"/>
+    </bean>
+
+
+    <!--
+    內部bean注入:嵌套聲明
+    -->
+    <bean id="emp2" class="com.tedu.spring.diobj.Emp">
+        <!--常規屬性注入-->
+        <property name="empName" value="李四" />
+        <property name="salary" value="75000.0" />
+
+        <!--對象類型注入-->
+        <property name="dept">
+            <bean id="dept2" class="com.tedu.spring.diobj.Dept">
+                <property name="dept_Name" value="達內客服部"/>
+            </bean>
+        </property>
+    </bean>
+
+
+    <!--
+    級聯屬性賦值
+    -->
+    <bean id="emp3" class="com.tedu.spring.diobj.Emp">
+        <!--常規屬性注入-->
+        <property name="empName" value="王五" />
+        <property name="salary" value="50000.0" />
+
+        <!--對象類型注入-->
+        <property name="dept" ref="dept1"/>
+        <property name="dept.dept_Name" value="達內採購部"/>
+    </bean>
+
+
+
+</beans>

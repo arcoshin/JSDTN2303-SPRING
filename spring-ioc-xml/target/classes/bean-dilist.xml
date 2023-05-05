@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--List集合屬性注入-->
+    <bean id="listTeacher" class="com.tedu.spring.dilistmap.Teacher">
+        <!--普通屬性注入-->
+        <property name="tName" value="趙老六"/>
+        <!--List注入Studnet對象-->
+        <property name="studentList">
+            <list>
+                <ref bean="student1"/>
+                <ref bean="student2"/>
+                <ref bean="student3"/>
+            </list>
+        </property>
+    </bean>
+    <!--學生1-->
+    <bean id="student1" class="com.tedu.spring.dilistmap.Student">
+        <property name="sName" value="張三"/>
+        <property name="age" value="222"/>
+    </bean>
+    <!--學生2-->
+    <bean id="student2" class="com.tedu.spring.dilistmap.Student">
+        <property name="sName" value="李四"/>
+        <property name="age" value="244"/>
+    </bean>
+    <!--學生3-->
+    <bean id="student3" class="com.tedu.spring.dilistmap.Student">
+        <property name="sName" value="王五"/>
+        <property name="age" value="288"/>
+    </bean>
+
+</beans>
