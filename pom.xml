@@ -11,6 +11,7 @@
     <modules>
         <module>springfirst</module>
         <module>spring-ioc-xml</module>
+        <module>homework</module>
     </modules>
 
     <properties>

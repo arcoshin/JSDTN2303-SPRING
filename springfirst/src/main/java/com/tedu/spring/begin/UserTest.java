@@ -1,10 +1,12 @@
 package com.tedu.spring.begin;
 
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UserTest {
-    public static void main(String[] args) throws Exception {
+    @Test
+    public void test() throws Exception{
         /**
          * 使用spring創建對象
          */

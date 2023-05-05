@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="setList" class="cn.tedu.homework.di.List">
+        <property name="id" value="1"/>
+        <property name="status" value="200"/>
+        <property name="receiver" value="張三"/>
+        <property name="address" value="太陽系月球"/>
+        <property name="comment">
+            <null/>
+        </property>
+    </bean>
+
+    <bean id="consList" class="cn.tedu.homework.di.List">
+        <constructor-arg name="id" value="2"/>
+        <constructor-arg name="status" value="200"/>
+        <constructor-arg name="receiver" value="李四"/>
+        <constructor-arg name="address" value="太陽系火星"/>
+        <constructor-arg name="comment">
+            <value><![CDATA[<這個商品真的很好>]]></value>
+        </constructor-arg>
+    </bean>
+</beans>

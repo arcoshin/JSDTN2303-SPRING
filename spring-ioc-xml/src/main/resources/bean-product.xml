@@ -22,4 +22,16 @@
             <null/>
         </constructor-arg>
     </bean>
+
+    <!--特殊字元處理-->
+    <bean id="productTest" class="com.tedu.spring.exercise.Product">
+        <constructor-arg name="title" value="&lt;標籤內文字&gt;"/>
+        <constructor-arg name="num" value="0"/>
+        <constructor-arg name="sales" value="0"/>
+        <constructor-arg name="comment">
+            <value><![CDATA[<CDATA空間內可以使用任意符號>]]></value>
+        </constructor-arg>
+    </bean>
+
+
 </beans>

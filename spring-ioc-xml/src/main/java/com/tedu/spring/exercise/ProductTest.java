@@ -15,4 +15,10 @@ public class ProductTest {
         Product p2 = new ClassPathXmlApplicationContext("bean-product.xml").getBean("productCons", Product.class);
         System.out.println(p2);
     }
+
+    @Test
+    public void specialTest(){
+        Product p3 = new ClassPathXmlApplicationContext("bean-product.xml").getBean("productTest", Product.class);
+        System.out.println(p3);
+    }
 }

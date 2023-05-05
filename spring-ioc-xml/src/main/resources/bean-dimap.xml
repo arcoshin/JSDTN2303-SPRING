@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Map集合屬性注入-->
+    <bean id="mapStudent" class="com.tedu.spring.dilistmap.Student">
+        <!--注入普通屬性-->
+        <property name="sName" value="小子"/>
+        <property name="age" value="8"/>
+        <!--注入Map屬性-->
+        <property name="teacherMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>王克晶</value>
+                    </key>
+                    <value>第一階段</value>
+                </entry>
+
+                <entry>
+                    <key>
+                        <value>範傳奇</value>
+                    </key>
+                    <value>第二階段</value>
+                </entry>
+
+                <entry>
+                    <key>
+                        <value>王偉健</value>
+                    </key>
+                    <value>第三階段</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>
