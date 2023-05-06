@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--環境準備-->
+    <bean class="com.tedu.spring.auto.Dept" id="dept">
+        <property name="dName" value="dept"/>
+    </bean>
+    <bean class="com.tedu.spring.auto.Dept" id="dept1">
+        <property name="dName" value="dept1"/>
+    </bean>
+    <bean class="com.tedu.spring.auto.Dept" id="dept2">
+        <property name="dName" value="dept2"/>
+    </bean>
+
+    <!--自動裝配特性:autowire-->
+    <bean class="com.tedu.spring.auto.Emp" id="emp1" autowire="byName">
+        <property name="eName" value="emp1"/>
+        <!--自動裝配，autowire="byType"系統會根據類型自行尋找，若結果只有一個則直接使用-->
+    </bean>
+</beans>

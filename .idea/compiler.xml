@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-ioc-xml" />
-        <module name="spring-first" />
+        <module name="spring-ioc-annotation" />
         <module name="homework" />
+        <module name="spring-first" />
       </profile>
     </annotationProcessing>
   </component>

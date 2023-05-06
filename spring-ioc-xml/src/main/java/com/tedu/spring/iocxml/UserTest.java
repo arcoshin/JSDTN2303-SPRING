@@ -19,7 +19,7 @@ public class UserTest {
     }
 //
 //    //2.根據class屬性獲取bean對象
-//    @Test
+//    @ScopeTest
 //    public void classTest() {
 //        //加載xml配置文件
 //        ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
