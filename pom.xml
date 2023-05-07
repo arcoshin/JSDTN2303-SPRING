@@ -13,7 +13,6 @@
         <module>spring-first</module>
         <module>spring-ioc-xml</module>
         <module>spring-ioc-annotation</module>
-        <module>testInsallerSuccess/untitled</module>
     </modules>
 
     <properties>

@@ -11,8 +11,10 @@
         <module name="spring-ioc-annotation" />
         <module name="springfirst" />
         <module name="spring-first" />
-        <module name="untitled" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="untitled" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
