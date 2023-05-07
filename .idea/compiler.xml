@@ -8,8 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-ioc-xml" />
         <module name="spring-ioc-annotation" />
-        <module name="homework" />
         <module name="spring-first" />
+        <module name="springfirst" />
+        <module name="homework" />
       </profile>
     </annotationProcessing>
   </component>
